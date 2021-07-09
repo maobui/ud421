@@ -7,9 +7,10 @@
 		<key>NSExceptionDomains</key>
 		<dict>
 			<key>www.kittenswhiskers.com</key>
-			<dict/>
-			<key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
-			<true/>
+			<dict>
+				<key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
 		</dict>
 	</dict>
 	<key>CFBundleDevelopmentRegion</key>
