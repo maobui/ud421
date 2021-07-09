@@ -31,14 +31,28 @@ class ViewController: UIViewController {
             return
         }
 
-        let task = URLSession.shared.dataTask(with: imageUrl) { data, response, error in
-            guard let data = data else {
-                print("no data, or there was an error")
+//        let task = URLSession.shared.dataTask(with: imageUrl) { data, response, error in
+//            guard let data = data else {
+//                print("no data, or there was an error")
+//                return
+//            }
+//            let downloadImage = UIImage(data: data)
+//            DispatchQueue.main.async {
+//                self.imageView.image = downloadImage
+//            }
+//        }
+//        task.resume()
+        
+        let task = URLSession.shared.downloadTask(with: imageUrl) { location, response, error in
+            guard let location = location else {
+                print("location is nil")
                 return
             }
-            let downloadImage = UIImage(data: data)
+            print(location)
+            let imageData = try! Data(contentsOf: location)
+            let image = UIImage(data: imageData)
             DispatchQueue.main.async {
-                self.imageView.image = downloadImage
+                self.imageView.image = image
             }
         }
         task.resume()
