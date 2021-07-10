@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let randomImageEndpoint = DogAPI.Endpoint.radomImageFromAllDogsCollection.url
-        let task = URLSession.shared.dataTask(with: randomImageEndpoint) { (data, _, error) in
+        let task = URLSession.shared.dataTask(with: randomImageEndpoint) { (data, _, _) in
             guard let data = data else {
                 print("No data")
                 return
