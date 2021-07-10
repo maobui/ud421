@@ -16,13 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b63-d2-xbL">
-                                <rect key="frame" x="167" y="353" width="80" height="30"/>
-                                <state key="normal" title="Load Image"/>
-                                <connections>
-                                    <action selector="handleLoadImageButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vRd-oE-9Zn"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bpV-uT-mYA">
                                 <rect key="frame" x="16" y="0.0" width="382" height="736"/>
                             </imageView>
@@ -30,8 +23,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="b63-d2-xbL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Ic-Rx-nCb"/>
-                            <constraint firstItem="b63-d2-xbL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LnA-6U-2Ty"/>
                             <constraint firstItem="bpV-uT-mYA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="deR-3A-cg4"/>
                             <constraint firstItem="bpV-uT-mYA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jGK-3P-u2T"/>
                             <constraint firstItem="bpV-uT-mYA" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="kGO-40-1yo"/>

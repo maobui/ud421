@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61A3965E269995980093D4AC /* DogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A3965D269995980093D4AC /* DogAPI.swift */; };
 		61C5D70626975CF4005A3DE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C5D70526975CF4005A3DE5 /* AppDelegate.swift */; };
 		61C5D70826975CF4005A3DE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C5D70726975CF4005A3DE5 /* SceneDelegate.swift */; };
 		61C5D70A26975CF4005A3DE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C5D70926975CF4005A3DE5 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		61A3965D269995980093D4AC /* DogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogAPI.swift; sourceTree = "<group>"; };
 		61C5D70226975CF4005A3DE5 /* network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = network.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C5D70526975CF4005A3DE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61C5D70726975CF4005A3DE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		61C5D73726975FC6005A3DE5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				61A3965D269995980093D4AC /* DogAPI.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				61C5D70A26975CF4005A3DE5 /* ViewController.swift in Sources */,
 				61C5D70626975CF4005A3DE5 /* AppDelegate.swift in Sources */,
 				61C5D70826975CF4005A3DE5 /* SceneDelegate.swift in Sources */,
+				61A3965E269995980093D4AC /* DogAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
