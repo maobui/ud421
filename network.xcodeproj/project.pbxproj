@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		61A3965E269995980093D4AC /* DogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A3965D269995980093D4AC /* DogAPI.swift */; };
+		61A3966026999C660093D4AC /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A3965F26999C660093D4AC /* DogImage.swift */; };
 		61C5D70626975CF4005A3DE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C5D70526975CF4005A3DE5 /* AppDelegate.swift */; };
 		61C5D70826975CF4005A3DE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C5D70726975CF4005A3DE5 /* SceneDelegate.swift */; };
 		61C5D70A26975CF4005A3DE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C5D70926975CF4005A3DE5 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		61A3965D269995980093D4AC /* DogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogAPI.swift; sourceTree = "<group>"; };
+		61A3965F26999C660093D4AC /* DogImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImage.swift; sourceTree = "<group>"; };
 		61C5D70226975CF4005A3DE5 /* network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = network.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C5D70526975CF4005A3DE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61C5D70726975CF4005A3DE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				61A3965D269995980093D4AC /* DogAPI.swift */,
+				61A3965F26999C660093D4AC /* DogImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61C5D70A26975CF4005A3DE5 /* ViewController.swift in Sources */,
+				61A3966026999C660093D4AC /* DogImage.swift in Sources */,
 				61C5D70626975CF4005A3DE5 /* AppDelegate.swift in Sources */,
 				61C5D70826975CF4005A3DE5 /* SceneDelegate.swift in Sources */,
 				61A3965E269995980093D4AC /* DogAPI.swift in Sources */,

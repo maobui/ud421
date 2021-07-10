@@ -20,15 +20,10 @@ class ViewController: UIViewController {
                 print("No data")
                 return
             }
-            print(data)
 
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                let url = json["message"] as! String
-                print(url)
-            } catch {
-                print(error)
-            }
+            let decoder = JSONDecoder()
+            let imgageData = try! decoder.decode(DogImage.self, from: data)
+            print(imgageData)
 
         }
         task.resume()
