@@ -25,15 +25,14 @@ class ViewController: UIViewController {
             let imgageData = try! decoder.decode(DogImage.self, from: data)
             guard let imageUrl = URL(string: imgageData.message) else { return }
 
-            DogAPI.downloadImageFile(url: imageUrl) { image, _ in
-                guard let image = image else {
-                    return
-                }
-                DispatchQueue.main.async {
-                    self.imageView.image = image
-                }
-            }
+            DogAPI.downloadImageFile(url: imageUrl, completionHandler: self.handleImageFileResponse(image: error:))
         }
         task.resume()
+    }
+
+    func handleImageFileResponse(image: UIImage?, error: Error?) {
+        DispatchQueue.main.async {
+            self.imageView.image = image
+        }
     }
 }
