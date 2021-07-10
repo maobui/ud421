@@ -14,20 +14,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let randomImageEndpoint = DogAPI.Endpoint.radomImageFromAllDogsCollection.url
-        let task = URLSession.shared.dataTask(with: randomImageEndpoint) { (data, _, _) in
-            guard let data = data else {
-                print("No data")
-                return
-            }
+        DogAPI.requestRandomImage(completionHandler: self.handleRandomImageResponse(imageData: error:))
+    }
 
-            let decoder = JSONDecoder()
-            let imgageData = try! decoder.decode(DogImage.self, from: data)
-            guard let imageUrl = URL(string: imgageData.message) else { return }
-
+    func handleRandomImageResponse(imageData: DogImage?, error: Error?) {
+        DogAPI.requestRandomImage { imageData, error in
+            guard let imageUrl = URL(string: imageData?.message ?? "") else { return }
             DogAPI.downloadImageFile(url: imageUrl, completionHandler: self.handleImageFileResponse(image: error:))
         }
-        task.resume()
     }
 
     func handleImageFileResponse(image: UIImage?, error: Error?) {
