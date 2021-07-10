@@ -21,6 +21,15 @@ class ViewController: UIViewController {
                 return
             }
             print(data)
+
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                let url = json["message"] as! String
+                print(url)
+            } catch {
+                print(error)
+            }
+
         }
         task.resume()
     }
