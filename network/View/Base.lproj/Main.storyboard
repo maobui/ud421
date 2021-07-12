@@ -16,22 +16,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bpV-uT-mYA">
-                                <rect key="frame" x="16" y="0.0" width="382" height="736"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OpX-ZI-gWW">
+                                <rect key="frame" x="16" y="16" width="382" height="704"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1oS-pq-9Ge">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="216"/>
+                                    </pickerView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bpV-uT-mYA">
+                                        <rect key="frame" x="0.0" y="216" width="382" height="488"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="488" id="3fe-n8-gI3"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bpV-uT-mYA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="deR-3A-cg4"/>
-                            <constraint firstItem="bpV-uT-mYA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jGK-3P-u2T"/>
-                            <constraint firstItem="bpV-uT-mYA" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="kGO-40-1yo"/>
-                            <constraint firstItem="bpV-uT-mYA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lfQ-he-o4F"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bpV-uT-mYA" secondAttribute="trailing" constant="16" id="yv5-4L-ymk"/>
+                            <constraint firstItem="OpX-ZI-gWW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="8NU-rf-CLu"/>
+                            <constraint firstAttribute="bottom" secondItem="OpX-ZI-gWW" secondAttribute="bottom" constant="16" id="AvD-8v-xuJ"/>
+                            <constraint firstItem="OpX-ZI-gWW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-16" id="Puf-zT-13v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OpX-ZI-gWW" secondAttribute="trailing" constant="16" id="jG6-lf-6Eo"/>
+                            <constraint firstItem="OpX-ZI-gWW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rWf-3Q-kAg"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="bpV-uT-mYA" id="lNT-tt-ksK"/>
+                        <outlet property="pickerView" destination="1oS-pq-9Ge" id="fC0-Tz-4bC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
