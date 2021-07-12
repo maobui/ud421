@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var pickerView: UIPickerView!
 
-    let breeds: [String] = ["greyhound", "poodle"]
+    var breeds: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,13 +20,21 @@ class ViewController: UIViewController {
 
         pickerView.dataSource = self
         pickerView.delegate = self
+
+        DogAPI.requestListBreeds(completionHandler: self.handleBreedsListResponse(breeds: error:))
+    }
+
+    func handleBreedsListResponse(breeds: [String], error: Error?) {
+        self.breeds = breeds
+        DispatchQueue.main.async {
+            self.pickerView.reloadAllComponents()
+        }
+
     }
 
     func handleRandomImageResponse(imageData: DogImage?, error: Error?) {
-        DogAPI.requestRandomImage { imageData, error in
-            guard let imageUrl = URL(string: imageData?.message ?? "") else { return }
-            DogAPI.downloadImageFile(url: imageUrl, completionHandler: self.handleImageFileResponse(image: error:))
-        }
+        guard let imageUrl = URL(string: imageData?.message ?? "") else { return }
+        DogAPI.downloadImageFile(url: imageUrl, completionHandler: self.handleImageFileResponse(image: error:))
     }
 
     func handleImageFileResponse(image: UIImage?, error: Error?) {
@@ -50,6 +58,6 @@ extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        DogAPI.requestRandomImage(completionHandler: self.handleRandomImageResponse(imageData: error:))
+        DogAPI.requestRandomImage(breed: breeds[row], completionHandler: self.handleRandomImageResponse(imageData: error:))
     }
 }
